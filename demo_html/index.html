@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="wrap wrap-sm">
+    <div class="header">
+        <h1>注册页面</h1>
+    </div>
+    <div class="form">
+        <form id="signup">
+            <div class="input-wrap">
+                <label>姓名</label>
+                <input name="name" data-rule='maxlength:5|minlength:1' type="text" class="input-control">
+                <div id="name-input-err" class="input-err">
+                    姓名格式有误
+                </div>
+            </div>
+            <div class="input-wrap">
+                <label>用户名</label>
+                <input name="username" data-rule='pattern:"^[a-z0-9]*$"|maxlength:8|minlength:4' type="text" class="input-control">
+                <div id="username-input-err" class="input-err">
+                    用户名有误
+                </div>
+            </div>
+            <div class="input-wrap">
+                <label>介绍</label>
+                <input name="intro" data-rule='nullable:false' type="text" class="input-control">
+                <div id="intro-input-err" class="input-err">
+                    最大长度超过
+                </div>
+            </div>
+            <div class="input-wrap">
+                <label>年龄</label>
+                <input name="age" data-rule='max:80|min:18' type="text" class="input-control">
+                <div id="age-input-err" class="input-err">
+                    年龄范围错误
+                </div>
+            </div>
+            <div class="input-wrap">
+                <label>密码</label>
+                <input name="password" data-rule='maxlength:8|minlength:3' type="password" class="input-control">
+                <div id="password-input-err" class="input-err">
+                    密码格式有误
+                </div>
+            </div>
+            <button class="btn-control" type="submit">提交</button>
+        </form>
+    </div>
+</div>
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
